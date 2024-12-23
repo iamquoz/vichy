@@ -1,0 +1,1 @@
+-record(test_table, {id, field1, field2}).

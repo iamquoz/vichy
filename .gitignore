@@ -1,0 +1,25 @@
+# Erlang specific ignores
+*.beam
+*.iml
+*.plt
+*.boot
+*.rel
+*.script
+*.escript
+*.dump
+*.ez
+
+# Rebar specific ignores
+rebar
+rebar3
+rebar.lock
+rebar.config.lock
+
+# Erlang release directories
+_rebar
+_rebar3
+rel/
+releases/
+deps/
+logs/
+tmp/

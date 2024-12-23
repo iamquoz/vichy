@@ -1,0 +1,25 @@
+{application, main,
+ [
+  {description, "Mnesia server"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  mnesia,
+                  cowboy
+                 ]},
+  {mod, {my_app, []}},
+  {env, []},
+  {modules, [
+             mnesia_setup,
+             http_server,
+             tables_handler
+            ]},
+  {start_phases, []},
+  {runtime_dependencies, [
+                          cowboy,
+                          cowlib,
+                          ranch
+                         ]}
+ ]}.

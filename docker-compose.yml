@@ -1,0 +1,38 @@
+version: '3'
+services:
+  node1:
+    build: .
+    environment:
+      - ERL_NODE_NAME=node1@node1
+    networks:
+      - mnesia_erlang_net
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./logs/node1:/app/logs
+
+  node2:
+    build: .
+    environment:
+      - ERL_NODE_NAME=node2@node2
+    networks:
+      - mnesia_erlang_net
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./logs/node2:/app/logs
+
+  node3:
+    build: .
+    environment:
+      - ERL_NODE_NAME=node3@node3
+    networks:
+      - mnesia_erlang_net
+    ports:
+      - "8083:8080"
+    volumes:
+      - ./logs/node3:/app/logs
+
+networks:
+  mnesia_erlang_net:
+    external: true
